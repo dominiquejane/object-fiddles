@@ -90,10 +90,22 @@ console.log(backPack);
 
   //Code Here
 
+  var me = {
+    name: "Drew",
+    age: 24,
+    height: "5'10",
+    gender: "male",
+    married: true,
+    eyecolor: "green",
+    hairColor: "blonde",
+  }
+
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
-
+for (prop in me) {
+  alert(me[prop]);
+}
 
 
 
