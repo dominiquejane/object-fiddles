@@ -118,10 +118,21 @@ for (prop in me) {
 
   //Code Here
 
+  var album = {
+    22: "3:24",
+    Hotel_California: "4:22",
+    Blank_Space: "3:05",
+    Stairway_to_Heaven: "7:18",
+    American_Pie: "8:30",
+  }
+
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
 
+for (prop in album) {
+  alert(prop);
+}
 
 
 
