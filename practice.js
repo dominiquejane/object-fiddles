@@ -5,6 +5,12 @@
 
   //Code here
 
+  var me = {
+    name: "Dominique",
+    age: 23,
+  }
+
+alert(me.name);
 
 
 
@@ -17,16 +23,28 @@
 
   //Code here
 
+var favoriteThings = {
+  band: "The Eagles",
+  food: "sushi",
+  person: "Drew",
+  book: "The Book of Mormon",
+  movie: "The Legend of the Leprechauns",
+  holiday: "Christmas",
+}
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
   //Code here
-
+favoriteThings.car = "Camry";
+favoriteThings.brand = "Calvin Klein";
 
 //Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
 
   //Code here
+favoriteThings.food = "Lettuce";
+favoriteThings.book = "50 Shades of Gray";
 
+console.log(favoriteThings);
 
 
 
@@ -196,9 +214,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
-  
-  
+
+
+
 //NEXT PROBLEM
 
 
