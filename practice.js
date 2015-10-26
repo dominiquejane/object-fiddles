@@ -184,6 +184,13 @@ that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
 
+  for (prop in user) {
+    if (user[prop]) {}
+      else{ delete user[prop]}
+  }
+
+console.log(user);
+
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
@@ -211,12 +218,15 @@ var user = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   //Code Here
+user.name = "Tyler S. McGinnis";
+user.email = "tyler.mcginnis@devmounta.in";
+
 
 //Now call the sayName method that's on the user object which will alert the users email
 
   //Code Here
 
-
+user.sayName();
 
 
 //NEXT PROBLEM
@@ -228,16 +238,23 @@ var user = {
 
   //Code Here
 
+  var methodCollection = new Object();
+
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
   //Code Here
+var x = "alertHello";
+var y = "logHello";
+  methodCollection[x] = function() {alert("hello");};
+  methodCollection[y] = function() {console.log("Hello");};
 
 //Now call your alertHello and logHello methods.
 
   //Code Here
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 //NEXT PROBLEM
@@ -247,6 +264,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
   //Code Here
+ var MakePerson = function(name, birthday, ssn) {
+  var person = {};
+  person.name = name;
+  person.birthday = birthday;
+  person.ssn = ssn;
+  return person;
+  }
 
 
 
@@ -257,7 +281,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-
+var MakeCard = function(name, number, cvc, expDate) {
+ var card = {}
+  card.name = name;
+  card.number = number;
+  card.cvc = cvc;
+  card.expDate = expDate;
+  return card;
+ }
 
 
 //NEXT PROBLEM
@@ -270,5 +301,36 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 */
 
   //Code Here
+
+
+var bindCard = function (person, card) {
+  var pc = {};
+  for (var prop in person) {
+    pc[prop] = person[prop];
+  }
+  for (prop in card) {
+    pc[prop] = card[prop];
+  }
+  return pc;
+};
+
+
+var D = MakePerson("D", "4/20", "666-66-6666");
+var d = MakeCard("d", 23423, 453, "12/23");
+console.log(bindCard(D, d));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
