@@ -145,9 +145,23 @@ for (prop in album) {
 
   //Code Here
 
+var states = {
+  Utah: 3456987,
+  California: 8987234,
+  Texas: 6098234,
+  Alaska: 345098,
+  Florida:5478987,
+}
+
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
+
+  for (prop in states) {
+    if (states[prop] > 30000) {
+      alert(prop);
+    }
+  }
 
 
 
